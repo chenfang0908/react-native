@@ -89,17 +89,21 @@ App({
     wx.removeStorageSync('token')
     this.navigateToLogin = true
     setTimeout(function() {
+      console.info(92);
       wx.navigateTo({
-        url: "/pages/authorize/index"
+        url: "/pages/authorize/index",
+        success:function(){
+          console.info(96);
+        }
       })
     }, 1000)
   },
   goStartIndexPage: function() {
-    setTimeout(function() {
-      wx.redirectTo({
-        url: "/pages/start/start"
-      })
-    }, 1000)
+    // setTimeout(function() {
+    //   wx.redirectTo({
+    //     url: "/pages/start/start"
+    //   })
+    // }, 1000)
   },  
   onShow (e) {
     const _this = this
